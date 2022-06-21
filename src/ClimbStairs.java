@@ -55,7 +55,7 @@ public class ClimbStairs {
         return getStairs(n, new int[n + 1]);
     }
 
-    public static int getStairs(int n, int[] memo) {
+    public int getStairs(int n, int[] memo) {
 
         if(memo[n] > 0) return memo[n];
 
