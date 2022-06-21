@@ -31,14 +31,14 @@ public class ClimbStairs {
     }
 
     // DP solution using maps, 1ms. I think it could be improved by using an array.
-    public static int fibDP(int n) {
+    public int fibDP(int n) {
 
         Map<Integer, Integer> memo = new HashMap<>();
 
         return helper(n, memo);
     }
 
-    public static int helper(int n, Map<Integer, Integer> map) {
+    public int helper(int n, Map<Integer, Integer> map) {
 
         if(map.containsKey(n)) return map.get(n);
         if(n < 2) return 1;
@@ -50,7 +50,7 @@ public class ClimbStairs {
     }
 
     // 0ms using DP memoization
-    public static int fibDPArray(int n) {
+    public int fibDPArray(int n) {
 
         return getStairs(n, new int[n + 1]);
     }
@@ -78,7 +78,4 @@ public class ClimbStairs {
         return climbStairs(n - 2) + climbStairs(n - 1);
     }
 
-    public static void main(String[] args) {
-        System.out.println(fibDPArray(4));
-    }
 }
